@@ -19,15 +19,20 @@
     <h2>URL Shortener</h2>
     <input v-model="url" placeholder="URL">
     <p>URL is: {{ url }}</p>
+    <p>shorted URL is: {{ surl }}</p>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to URL Shortener',
+      url: '',
+      surl: ''
     }
   }
 }
