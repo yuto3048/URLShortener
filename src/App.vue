@@ -19,7 +19,7 @@ export default {
   name: 'app',
   methods: {
     doSubmit: function(){
-      axios.get('http://localhost:8080/json?url=https://yahoo.co.jp').then(response => {
+      axios.get('http://localhost:8080/json?url=' + this.url).then(response => {
         if (response.status === 200) {
           console.log(response)
           console.log(response.data)
